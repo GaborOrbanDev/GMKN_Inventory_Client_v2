@@ -1,0 +1,1 @@
+# GMKN_Inventory_Client_v2
