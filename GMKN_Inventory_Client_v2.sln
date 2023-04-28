@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GMKN_Inventory_Client_v2", "GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2.csproj", "{67AFFB4A-F8E2-4E85-89F5-89B4D4F757B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67AFFB4A-F8E2-4E85-89F5-89B4D4F757B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67AFFB4A-F8E2-4E85-89F5-89B4D4F757B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67AFFB4A-F8E2-4E85-89F5-89B4D4F757B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67AFFB4A-F8E2-4E85-89F5-89B4D4F757B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22D7270A-64BC-4F95-B2FD-05519C7D0610}
+	EndGlobalSection
+EndGlobal
