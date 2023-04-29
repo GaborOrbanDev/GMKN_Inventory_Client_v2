@@ -18,7 +18,6 @@ namespace GMKN_Inventory_Client_v2
         public Form1()
         {
             InitializeComponent();
-            loadProducts(listBox1);
         }
 
         private static void loadProducts(ListBox listbox)
@@ -29,10 +28,26 @@ namespace GMKN_Inventory_Client_v2
             Api proxy = new Api(url, key);
 
             // find all categories in the store
-            ApiResponse<List<ProductDTO>> response = proxy.ProductsFindAll();
+            try
+            {
+                ApiResponse<List<ProductDTO>> response = proxy.ProductsFindAll();
 
-            listbox.DataSource = response.Content.ToList();
-            listbox.DisplayMember = "ProductName";
+                listbox.DataSource = response.Content.ToList();
+                listbox.DisplayMember = "ProductName";
+            }
+            catch (Exception ex)
+            {
+
+                if(DialogResult.Retry == MessageBox.Show(ex.Message, "Hiba történt az adatok betöltésekor", MessageBoxButtons.RetryCancel))
+                {
+                    loadProducts(listbox);
+                }
+                else
+                {
+                    Application.Exit();
+                }
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,6 +63,11 @@ namespace GMKN_Inventory_Client_v2
             var matches = response.Content.Where(r => r.ProductName.Contains(textBoxName.Text) && r.Sku.Contains(textBoxSKU.Text));
             listBox1.DataSource = matches.ToList();
             listBox1.DisplayMember = "ProductName";
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            loadProducts(listBox1);
         }
     }
 }
