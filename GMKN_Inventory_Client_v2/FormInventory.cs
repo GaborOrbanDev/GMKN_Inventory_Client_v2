@@ -12,9 +12,12 @@ namespace GMKN_Inventory_Client_v2
 {
     public partial class FormInventory : Form
     {
-        public FormInventory()
+        public string bvin;
+
+        public FormInventory(string bvin)
         {
             InitializeComponent();
+            this.bvin = bvin;
         }
     }
 }
