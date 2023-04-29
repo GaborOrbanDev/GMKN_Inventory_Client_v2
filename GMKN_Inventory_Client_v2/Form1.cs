@@ -18,6 +18,11 @@ namespace GMKN_Inventory_Client_v2
         public Form1()
         {
             InitializeComponent();
+            loadProducts(listBox1);
+        }
+
+        private static void loadProducts(ListBox listbox)
+        {
             string url = "http://20.234.113.211:8100/";
             string key = "1-67944b35-32ec-4185-83f1-22018c9a1ed1";
 
@@ -25,10 +30,9 @@ namespace GMKN_Inventory_Client_v2
 
             // find all categories in the store
             ApiResponse<List<ProductDTO>> response = proxy.ProductsFindAll();
-            foreach(var r in response.Content)
-            {
-                Console.WriteLine(r);
-            }
+
+            listbox.DataSource = response.Content.ToList();
+            listbox.DisplayMember = "ProductName";
         }
     }
 }
