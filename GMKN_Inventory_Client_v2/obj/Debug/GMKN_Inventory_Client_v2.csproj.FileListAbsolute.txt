@@ -22,3 +22,4 @@ C:\Users\ogabo\OneDrive - Corvinus University of Budapest\4. félév\Rendszerfej
 C:\Users\ogabo\OneDrive - Corvinus University of Budapest\4. félév\Rendszerfejlesztés\kliens\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\obj\Debug\GMKN_Inventory_Client_v2.csproj.CopyComplete
 C:\Users\ogabo\OneDrive - Corvinus University of Budapest\4. félév\Rendszerfejlesztés\kliens\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\obj\Debug\GMKN_Inventory_Client_v2.exe
 C:\Users\ogabo\OneDrive - Corvinus University of Budapest\4. félév\Rendszerfejlesztés\kliens\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\obj\Debug\GMKN_Inventory_Client_v2.pdb
+C:\Users\ogabo\OneDrive - Corvinus University of Budapest\4. félév\Rendszerfejlesztés\kliens\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\obj\Debug\GMKN_Inventory_Client_v2.Form1.resources
