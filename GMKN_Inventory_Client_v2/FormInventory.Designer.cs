@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,21 +38,23 @@
             this.label_lsp = new System.Windows.Forms.Label();
             this.label_osp = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.out_sub = new System.Windows.Forms.Button();
+            this.low_sub = new System.Windows.Forms.Button();
+            this.reserved_sub = new System.Windows.Forms.Button();
+            this.quantity_sub = new System.Windows.Forms.Button();
+            this.out_add = new System.Windows.Forms.Button();
+            this.low_add = new System.Windows.Forms.Button();
+            this.reserved_add = new System.Windows.Forms.Button();
+            this.quatity_add = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
             this.label_name = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -136,14 +139,14 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button8);
-            this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.out_sub);
+            this.groupBox1.Controls.Add(this.low_sub);
+            this.groupBox1.Controls.Add(this.reserved_sub);
+            this.groupBox1.Controls.Add(this.quantity_sub);
+            this.groupBox1.Controls.Add(this.out_add);
+            this.groupBox1.Controls.Add(this.low_add);
+            this.groupBox1.Controls.Add(this.reserved_add);
+            this.groupBox1.Controls.Add(this.quatity_add);
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.textBox2);
@@ -156,77 +159,85 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mennyiség változtatása";
             // 
-            // button8
+            // out_sub
             // 
-            this.button8.Location = new System.Drawing.Point(257, 226);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(88, 30);
-            this.button8.TabIndex = 17;
-            this.button8.Text = "-";
-            this.button8.UseVisualStyleBackColor = true;
+            this.out_sub.Location = new System.Drawing.Point(257, 226);
+            this.out_sub.Name = "out_sub";
+            this.out_sub.Size = new System.Drawing.Size(88, 30);
+            this.out_sub.TabIndex = 17;
+            this.out_sub.Text = "-";
+            this.out_sub.UseVisualStyleBackColor = true;
+            this.out_sub.Click += new System.EventHandler(this.out_sub_Click);
             // 
-            // button7
+            // low_sub
             // 
-            this.button7.Location = new System.Drawing.Point(257, 171);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(88, 30);
-            this.button7.TabIndex = 16;
-            this.button7.Text = "-";
-            this.button7.UseVisualStyleBackColor = true;
+            this.low_sub.Location = new System.Drawing.Point(257, 171);
+            this.low_sub.Name = "low_sub";
+            this.low_sub.Size = new System.Drawing.Size(88, 30);
+            this.low_sub.TabIndex = 16;
+            this.low_sub.Text = "-";
+            this.low_sub.UseVisualStyleBackColor = true;
+            this.low_sub.Click += new System.EventHandler(this.low_sub_Click);
             // 
-            // button6
+            // reserved_sub
             // 
-            this.button6.Location = new System.Drawing.Point(257, 113);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(88, 30);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "-";
-            this.button6.UseVisualStyleBackColor = true;
+            this.reserved_sub.Location = new System.Drawing.Point(257, 113);
+            this.reserved_sub.Name = "reserved_sub";
+            this.reserved_sub.Size = new System.Drawing.Size(88, 30);
+            this.reserved_sub.TabIndex = 15;
+            this.reserved_sub.Text = "-";
+            this.reserved_sub.UseVisualStyleBackColor = true;
+            this.reserved_sub.Click += new System.EventHandler(this.reserved_sub_Click);
             // 
-            // button5
+            // quantity_sub
             // 
-            this.button5.Location = new System.Drawing.Point(257, 57);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(88, 30);
-            this.button5.TabIndex = 14;
-            this.button5.Text = "-";
-            this.button5.UseVisualStyleBackColor = true;
+            this.quantity_sub.Location = new System.Drawing.Point(257, 57);
+            this.quantity_sub.Name = "quantity_sub";
+            this.quantity_sub.Size = new System.Drawing.Size(88, 30);
+            this.quantity_sub.TabIndex = 14;
+            this.quantity_sub.Text = "-";
+            this.quantity_sub.UseVisualStyleBackColor = true;
+            this.quantity_sub.Click += new System.EventHandler(this.quantity_sub_Click);
             // 
-            // button4
+            // out_add
             // 
-            this.button4.Location = new System.Drawing.Point(133, 226);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(88, 30);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "+";
-            this.button4.UseVisualStyleBackColor = true;
+            this.out_add.Location = new System.Drawing.Point(133, 226);
+            this.out_add.Name = "out_add";
+            this.out_add.Size = new System.Drawing.Size(88, 30);
+            this.out_add.TabIndex = 13;
+            this.out_add.Text = "+";
+            this.out_add.UseVisualStyleBackColor = true;
+            this.out_add.Click += new System.EventHandler(this.out_add_Click);
             // 
-            // button3
+            // low_add
             // 
-            this.button3.Location = new System.Drawing.Point(133, 174);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 30);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "+";
-            this.button3.UseVisualStyleBackColor = true;
+            this.low_add.Location = new System.Drawing.Point(133, 174);
+            this.low_add.Name = "low_add";
+            this.low_add.Size = new System.Drawing.Size(88, 30);
+            this.low_add.TabIndex = 12;
+            this.low_add.Text = "+";
+            this.low_add.UseVisualStyleBackColor = true;
+            this.low_add.Click += new System.EventHandler(this.low_add_Click);
             // 
-            // button2
+            // reserved_add
             // 
-            this.button2.Location = new System.Drawing.Point(133, 116);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 30);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "+";
-            this.button2.UseVisualStyleBackColor = true;
+            this.reserved_add.Location = new System.Drawing.Point(133, 116);
+            this.reserved_add.Name = "reserved_add";
+            this.reserved_add.Size = new System.Drawing.Size(88, 30);
+            this.reserved_add.TabIndex = 11;
+            this.reserved_add.Text = "+";
+            this.reserved_add.UseVisualStyleBackColor = true;
+            this.reserved_add.Click += new System.EventHandler(this.reserved_add_Click);
             // 
-            // button1
+            // quatity_add
             // 
-            this.button1.Location = new System.Drawing.Point(133, 55);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 30);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
+            this.quatity_add.Location = new System.Drawing.Point(133, 55);
+            this.quatity_add.Name = "quatity_add";
+            this.quatity_add.Size = new System.Drawing.Size(88, 30);
+            this.quatity_add.TabIndex = 10;
+            this.quatity_add.Text = "+";
+            this.quatity_add.UseVisualStyleBackColor = true;
+            this.quatity_add.Click += new System.EventHandler(this.quatity_add_Click);
             // 
             // textBox4
             // 
@@ -256,16 +267,17 @@
             this.textBox1.Size = new System.Drawing.Size(70, 30);
             this.textBox1.TabIndex = 0;
             // 
-            // button9
+            // btn_save
             // 
-            this.button9.BackColor = System.Drawing.Color.Gold;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button9.Location = new System.Drawing.Point(442, 373);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(216, 50);
-            this.button9.TabIndex = 10;
-            this.button9.Text = "Mentés";
-            this.button9.UseVisualStyleBackColor = false;
+            this.btn_save.BackColor = System.Drawing.Color.Gold;
+            this.btn_save.Enabled = false;
+            this.btn_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btn_save.Location = new System.Drawing.Point(442, 373);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(216, 50);
+            this.btn_save.TabIndex = 10;
+            this.btn_save.Text = "Mentés";
+            this.btn_save.UseVisualStyleBackColor = false;
             // 
             // label_name
             // 
@@ -277,13 +289,17 @@
             this.label_name.TabIndex = 11;
             this.label_name.Text = "Ruha";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FormInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label_name);
-            this.Controls.Add(this.button9);
+            this.Controls.Add(this.btn_save);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label_osp);
             this.Controls.Add(this.label_lsp);
@@ -299,6 +315,7 @@
             this.Text = "Készlet szerkesztése";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,19 +332,20 @@
         private System.Windows.Forms.Label label_lsp;
         private System.Windows.Forms.Label label_osp;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button out_sub;
+        private System.Windows.Forms.Button low_sub;
+        private System.Windows.Forms.Button reserved_sub;
+        private System.Windows.Forms.Button quantity_sub;
+        private System.Windows.Forms.Button out_add;
+        private System.Windows.Forms.Button low_add;
+        private System.Windows.Forms.Button reserved_add;
+        private System.Windows.Forms.Button quatity_add;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Label label_name;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
