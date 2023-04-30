@@ -84,5 +84,13 @@ namespace GMKN_Inventory_Client_v2
                 MessageBox.Show($"{product.ProductName} sikeressen frissítve");
             }
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(DialogResult.Cancel == MessageBox.Show("Bizotos, hogy be akarja zárni az alkalmazást?", "Üzenet", MessageBoxButtons.OKCancel))
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }
