@@ -15,13 +15,11 @@ namespace GMKN_Inventory_Client_v2
 {
     public partial class FormInventory : Form
     {
-        public string bvin;
+        public ProductInventoryDTO inv;
 
         public FormInventory(string bvin_v, string productName_v)
         {
             InitializeComponent();
-            this.bvin = bvin_v;
-            Console.WriteLine(bvin);
 
             string url = "http://20.234.113.211:8100/";
             string key = "1-67944b35-32ec-4185-83f1-22018c9a1ed1";
@@ -30,6 +28,8 @@ namespace GMKN_Inventory_Client_v2
 
             // find all categories in the store
             var response = proxy.ProductInventoryFindForProduct(bvin_v);
+
+            inv = response.Content[0];
 
             label_name.Text = productName_v;
             label_qoh.Text = response.Content[0].QuantityOnHand.ToString();
@@ -169,6 +169,38 @@ namespace GMKN_Inventory_Client_v2
         private void out_sub_Click(object sender, EventArgs e)
         {
             handel_change(label_osp, textBox4, true, false);
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                inv.QuantityOnHand = int.Parse(label_qoh.Text);
+                inv.QuantityReserved = int.Parse(label_qr.Text);
+                inv.LowStockPoint = int.Parse(label_lsp.Text);
+                inv.OutOfStockPoint = int.Parse(label_osp.Text);
+
+                string url = "http://20.234.113.211:8100/";
+                string key = "1-67944b35-32ec-4185-83f1-22018c9a1ed1";
+
+                Api proxy = new Api(url, key);
+                ApiResponse<ProductInventoryDTO> response = proxy.ProductInventoryUpdate(inv);
+                if(response.Errors.Count > 0)
+                {
+                    MessageBox.Show(response.Errors[0].ToString());
+                }
+                else
+                {
+                    this.Close();
+                    DialogResult = DialogResult.OK;
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

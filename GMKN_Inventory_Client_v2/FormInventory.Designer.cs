@@ -278,6 +278,7 @@
             this.btn_save.TabIndex = 10;
             this.btn_save.Text = "Mentés";
             this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // label_name
             // 
@@ -285,7 +286,7 @@
             this.label_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label_name.Location = new System.Drawing.Point(47, 27);
             this.label_name.Name = "label_name";
-            this.label_name.Size = new System.Drawing.Size(78, 31);
+            this.label_name.Size = new System.Drawing.Size(62, 25);
             this.label_name.TabIndex = 11;
             this.label_name.Text = "Ruha";
             // 

@@ -79,7 +79,10 @@ namespace GMKN_Inventory_Client_v2
             ProductDTO product = (ProductDTO)listBox1.SelectedItem;
 
             FormInventory form = new FormInventory(product.Bvin, product.ProductName);
-            form.ShowDialog();
+            if(DialogResult.OK == form.ShowDialog())
+            {
+                MessageBox.Show($"{product.ProductName} sikeressen frissítve");
+            }
         }
     }
 }
