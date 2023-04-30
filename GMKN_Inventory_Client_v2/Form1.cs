@@ -81,7 +81,7 @@ namespace GMKN_Inventory_Client_v2
             FormInventory form = new FormInventory(product.Bvin, product.ProductName);
             if(DialogResult.OK == form.ShowDialog())
             {
-                MessageBox.Show($"{product.ProductName} sikeressen frissítve");
+                MessageBox.Show($"{product.ProductName} sikeresen frissítve");
             }
         }
 
