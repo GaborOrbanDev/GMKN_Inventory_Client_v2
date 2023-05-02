@@ -27,7 +27,6 @@ namespace GMKN_Inventory_Client_v2
 
             Api proxy = new Api(url, key);
 
-            // find all categories in the store
             try
             {
                 ApiResponse<List<ProductDTO>> response = proxy.ProductsFindAll();
