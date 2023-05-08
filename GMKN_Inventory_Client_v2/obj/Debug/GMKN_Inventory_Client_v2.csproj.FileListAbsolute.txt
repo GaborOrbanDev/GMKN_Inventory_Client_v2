@@ -24,3 +24,23 @@ C:\Users\ogabo\OneDrive - Corvinus University of Budapest\4. félév\Rendszerfej
 C:\Users\ogabo\OneDrive - Corvinus University of Budapest\4. félév\Rendszerfejlesztés\kliens\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\obj\Debug\GMKN_Inventory_Client_v2.pdb
 C:\Users\ogabo\OneDrive - Corvinus University of Budapest\4. félév\Rendszerfejlesztés\kliens\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\obj\Debug\GMKN_Inventory_Client_v2.Form1.resources
 C:\Users\ogabo\OneDrive - Corvinus University of Budapest\4. félév\Rendszerfejlesztés\kliens\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\obj\Debug\GMKN_Inventory_Client_v2.FormInventory.resources
+C:\Users\hadda\Source\Repos\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\bin\Debug\GMKN_Inventory_Client_v2.exe.config
+C:\Users\hadda\Source\Repos\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\bin\Debug\GMKN_Inventory_Client_v2.exe
+C:\Users\hadda\Source\Repos\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\bin\Debug\GMKN_Inventory_Client_v2.pdb
+C:\Users\hadda\Source\Repos\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\bin\Debug\System.Web.Mvc.dll
+C:\Users\hadda\Source\Repos\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\bin\Debug\Newtonsoft.Json.dll
+C:\Users\hadda\Source\Repos\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\bin\Debug\System.Web.WebPages.dll
+C:\Users\hadda\Source\Repos\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\bin\Debug\System.Web.Razor.dll
+C:\Users\hadda\Source\Repos\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\hadda\Source\Repos\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\hadda\Source\Repos\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\obj\Debug\GMKN_Inventory_Client_v2.csproj.AssemblyReference.cache
+C:\Users\hadda\Source\Repos\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\obj\Debug\GMKN_Inventory_Client_v2.csproj.SuggestedBindingRedirects.cache
+C:\Users\hadda\Source\Repos\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\obj\Debug\GMKN_Inventory_Client_v2.exe.config
+C:\Users\hadda\Source\Repos\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\obj\Debug\GMKN_Inventory_Client_v2.Form1.resources
+C:\Users\hadda\Source\Repos\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\obj\Debug\GMKN_Inventory_Client_v2.FormInventory.resources
+C:\Users\hadda\Source\Repos\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\obj\Debug\GMKN_Inventory_Client_v2.Properties.Resources.resources
+C:\Users\hadda\Source\Repos\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\obj\Debug\GMKN_Inventory_Client_v2.csproj.GenerateResource.cache
+C:\Users\hadda\Source\Repos\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\obj\Debug\GMKN_Inventory_Client_v2.csproj.CoreCompileInputs.cache
+C:\Users\hadda\source\repos\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\obj\Debug\GMKN_Inventory_Client_v2.csproj.CopyComplete
+C:\Users\hadda\Source\Repos\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\obj\Debug\GMKN_Inventory_Client_v2.exe
+C:\Users\hadda\Source\Repos\GMKN_Inventory_Client_v2\GMKN_Inventory_Client_v2\obj\Debug\GMKN_Inventory_Client_v2.pdb

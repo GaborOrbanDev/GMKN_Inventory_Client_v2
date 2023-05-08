@@ -15,12 +15,15 @@ namespace GMKN_Inventory_Client_v2
 {
     public partial class Form1 : Form
     {
+
+        public ApiResponse<List<ProductDTO>> response { get; set; }
+
         public Form1()
         {
             InitializeComponent();
         }
 
-        private static void loadProducts(ListBox listbox)
+        public void loadProducts(ListBox listbox)
         {
             string url = "http://20.234.113.211:8100/";
             string key = "1-67944b35-32ec-4185-83f1-22018c9a1ed1";
@@ -29,7 +32,7 @@ namespace GMKN_Inventory_Client_v2
 
             try
             {
-                ApiResponse<List<ProductDTO>> response = proxy.ProductsFindAll();
+                response = proxy.ProductsFindAll();
 
                 listbox.DataSource = response.Content.ToList();
                 listbox.DisplayMember = "ProductName";
@@ -60,10 +63,15 @@ namespace GMKN_Inventory_Client_v2
             // find all categories in the store
             ApiResponse<List<ProductDTO>> response = proxy.ProductsFindAll();
 
-            var matches = response.Content.Where(r => r.ProductName.Contains(textBoxName.Text) && r.Sku.Contains(textBoxSKU.Text));
+            var matches = Filter(response.Content, textBoxName.Text, textBoxSKU.Text);
             listBox1.DataSource = matches.ToList();
             listBox1.DisplayMember = "ProductName";
             listBox1.SelectedIndexChanged += new EventHandler(listBox1_SelectedIndexChanged);
+        }
+
+        public List<ProductDTO> Filter(IEnumerable<ProductDTO> products, string name, string sku)
+        { 
+            return products.Where(r => r.ProductName.Contains(name) && r.Sku.Contains(sku)).ToList();
         }
 
         private void Form1_Load(object sender, EventArgs e)
